@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 50);
     }
 
+    // Tıklama olayını ekle
+    noBtn.addEventListener('click', () => {
+        moveButton();
+        moveButton(); // İki kere çağırarak daha hızlı kaçmasını sağla
+    });
+
     // Her 1.5 saniyede bir hareket et
     setInterval(moveButton, 1500);
     // İlk hareketi hemen başlat
