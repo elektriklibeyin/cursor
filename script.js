@@ -6,9 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Ben de seni özledim papatyam! ❤️');
     });
 
-    noBtn.addEventListener('mouseover', moveButton);
-    noBtn.addEventListener('click', moveButton);
-
     const animations = [
         { transform: 'rotate(360deg) scale(0.8)', transition: 'all 0.4s ease' },
         { transform: 'translateY(-20px) scale(1.1)', transition: 'all 0.3s ease-out' },
@@ -34,4 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
             noBtn.style.transform = randomAnimation.transform;
         }, 50);
     }
+
+    // Her 1.5 saniyede bir hareket et
+    setInterval(moveButton, 1500);
+    // İlk hareketi hemen başlat
+    moveButton();
 }); 
